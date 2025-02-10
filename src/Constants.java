@@ -7,11 +7,11 @@ public class Constants {
     public static final String SCREEN_TITLE = "Pong";
 
     // Player Constants
-    public static final int PLAYER_WIDTH = 20;
-    public static final int PLAYER_HEIGHT = 100;
-    public static final int BALL_SIZE = 10;
+    public static final double PLAYER_WIDTH = 20;
+    public static final double PLAYER_HEIGHT = 100;
+    public static final double BALL_SIZE = 10;
     public static final Color PLAYER_COLOR = Color.white;
 
     // Padding
-    public static final int HORIZONTAL_PADDING = 40;
+    public static final double HORIZONTAL_PADDING = 40;
 }
