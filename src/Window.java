@@ -19,6 +19,9 @@ public class Window extends JFrame implements Runnable{
         this.setVisible(true);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.addKeyListener(keyListener);
+        Constants.TOOLBAR_HEIGHT = this.getInsets().top;
+        Constants.INSETS_BOTTOM = this.getInsets().bottom;
+
         g2 = (Graphics2D)this.getGraphics();
         playerOne = new Player(Constants.HORIZONTAL_PADDING,40, Constants.PLAYER_WIDTH, Constants.PLAYER_HEIGHT, Constants.PLAYER_COLOR);
         playerController = new PlayerController(playerOne, keyListener);
@@ -72,11 +75,7 @@ public class Window extends JFrame implements Runnable{
 
             update(deltaTime);
 
-            try {
-                Thread.sleep(30);
-            }catch (Exception e){
 
-            }
         }
 
     }

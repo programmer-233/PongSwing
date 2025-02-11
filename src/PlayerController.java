@@ -10,11 +10,13 @@ public class PlayerController {
     }
     public void update(double dt){
         if (keyListener.isKeyPressed(KeyEvent.VK_DOWN)){
-
-                this.player.y += 100 *dt;
+            if ((player.y + Constants.PLAYER_SPEED * dt) + player.height < Constants.SCREEN_HEIGHT - Constants.INSETS_BOTTOM) {
+                this.player.y += Constants.PLAYER_SPEED * dt;
+            }
         }else if (keyListener.isKeyPressed(KeyEvent.VK_UP)){
-
-            this.player.y -= 100 *dt;
+            if (player.y - Constants.PLAYER_SPEED *dt > Constants.TOOLBAR_HEIGHT) {
+                this.player.y -= Constants.PLAYER_SPEED * dt;
+            }
         }
     }
 }
