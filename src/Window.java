@@ -9,8 +9,9 @@ public class Window extends JFrame implements Runnable{
     public KL keyListener = new KL();
     public Player playerOne;
     public Player ai;
-    public Player ball;
+    public Player ballShape;
     public PlayerController playerController;
+    public Ball ball;
 
     public Window() {
         this.setSize(Constants.SCREEN_WIDTH, Constants.SCREEN_HEIGHT);
@@ -26,7 +27,8 @@ public class Window extends JFrame implements Runnable{
         playerOne = new Player(Constants.HORIZONTAL_PADDING,40, Constants.PLAYER_WIDTH, Constants.PLAYER_HEIGHT, Constants.PLAYER_COLOR);
         playerController = new PlayerController(playerOne, keyListener);
         ai = new Player(Constants.SCREEN_WIDTH - Constants.PLAYER_WIDTH -Constants.HORIZONTAL_PADDING , 40, Constants.PLAYER_WIDTH, Constants.PLAYER_HEIGHT, Constants.PLAYER_COLOR);
-        ball = new Player(Constants.SCREEN_WIDTH/2, Constants.SCREEN_HEIGHT/2, Constants.BALL_SIZE, Constants.BALL_SIZE, Constants.PLAYER_COLOR);
+        ballShape = new Player(Constants.SCREEN_WIDTH/2, Constants.SCREEN_HEIGHT/2, Constants.BALL_SIZE, Constants.BALL_SIZE, Constants.PLAYER_COLOR);
+        ball = new Ball(ballShape, playerOne, ai);
     }
     // Delta Time
     public void update(double dt){
@@ -63,7 +65,7 @@ public class Window extends JFrame implements Runnable{
         g2.fillRect(0, 0, Constants.SCREEN_WIDTH, Constants.SCREEN_HEIGHT);
         playerOne.draw(g2);
         ai.draw(g2);
-        ball.draw(g2);
+        ballShape.draw(g2);
     }
 
     public void run(){
