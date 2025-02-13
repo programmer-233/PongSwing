@@ -4,11 +4,13 @@
           
 An Implementation of Pong in Java Using Swing.
 ## Task 1: First Window Was Created 
-![Screenshot 2025-01-24 175730](https://github.com/user-attachments/assets/64ae1e2a-b7fa-433e-af49-4186c1425726)
+![pongSwing10](https://github.com/user-attachments/assets/f72cf4ac-a3c6-4cce-9df3-6d8ea3e0b302)
+
 
 ## Task 2: The Game Loop
 
 
 ## Task 3: Key Listeners
 
-## Task 4: Create Players
+## Task 4: Create Players and enable Movement
+![pongswing2](https://github.com/user-attachments/assets/b37cdd4c-02b3-4bf8-9ff6-e8258dbda654)
